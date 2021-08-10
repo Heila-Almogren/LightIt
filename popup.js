@@ -1,6 +1,14 @@
 let colors = document.getElementsByClassName('ColorSelector');
 // let on = document.getElementById("checkbox").checked
 
+// let onoff = document.getElementById("hello")
+// let range = new Range();
+// range.selectNodeContents(onoff);
+
+// document.getSelection().removeAllRanges();
+// document.getSelection().addRange(range);
+
+
 chrome.storage.local.get(["highlighterStatus"], function (res) {
     if (res == null || res == undefined) {
         // alert("res is undefined")
