@@ -1,28 +1,26 @@
 
 
-// // source https://stackoverflow.com/questions/18049576/simple-highlight-text-chrome-extension
 
-HighlightBack()
-// Returns highlight to document after refresh
-function HighlightBack() {
+// HighlightBack()
+// // Returns highlight to document after refresh
+// function HighlightBack() {
 
-    chrome.storage.local.get(["anchors"], function (res) {
-        alert(JSON.stringify(res["anchors"]))
-        let p = document.getElementById("firstHeading")
-        let range = new Range();
-        range.setStart(p.firstChild, 0);
-        range.setEnd(p.firstChild, 3);
-        document.getSelection().removeAllRanges();
-        document.getSelection().addRange(range);
-    })
+//     chrome.storage.local.get(["anchors"], function (res) {
+//         // alert(JSON.stringify(res["anchors"]))
+//         let p = document.getElementById("firstHeading")
+//         let range = new Range();
+//         range.setStart(p.firstChild, 0);
+//         range.setEnd(p.firstChild, 3);
+//         document.getSelection().removeAllRanges();
+//         document.getSelection().addRange(range);
+//     })
 
-}
-
+// }
 
 
-// // back to https://stackoverflow.com/questions/23479533/how-can-i-save-a-range-object-from-getselection-so-that-i-can-reproduce-it-on
 
 
+// source https://stackoverflow.com/questions/18049576/simple-highlight-text-chrome-extension
 async function makeEditableAndHighlight(colour) {
 
     // Check if highlighting is on or off
@@ -154,3 +152,7 @@ function saveHighlight(selection, range) {
     })
 
 }
+
+
+
+// back to https://stackoverflow.com/questions/23479533/how-can-i-save-a-range-object-from-getselection-so-that-i-can-reproduce-it-on
